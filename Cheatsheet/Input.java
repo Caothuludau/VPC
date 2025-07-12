@@ -11,7 +11,9 @@ public class Input {
         // For competitive programming, you can use System.getenv("OUTPUT_PATH") to write output to a file
 
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH"))); 
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+//        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream("inp.txt")));
+//        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
         // or use OutputStreamWriter(System.out) during testing
 
         // Get a number from a line
@@ -51,5 +53,13 @@ public class Input {
                 grid[i][j] = line.charAt(j);
             }
         }
+
+
+
+        bufferedWriter.write("result");
+        bufferedWriter.newLine();
+
+        bufferedReader.close();
+        bufferedWriter.close();
     }
 }
